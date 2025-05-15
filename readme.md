@@ -48,7 +48,7 @@ This version:
 - Shows both the image description and the final caption
 
 ```bash 
-python instagram-captioner/app.py
+python app.py
 ```
 
 #### Version 2 (Direct Vision-Language Approach)
@@ -58,17 +58,22 @@ This version:
 - Only shows the final caption
 
 ```bash
-python -m instagram-captioner
+python main.py
 ```
 
 ## How It Works
 
 ### Version 1
+
+![Version 1 Demo](output/v1.jpg)
+
 1. Uses the Salesforce BLIP model to generate a text description of the image
 2. Sends this description to Gemini with a prompt to create an Instagram caption
 3. Returns both the original description and the generated caption
 
 ### Version 2
+![Version 2 demo](output/v2.jpg)
+
 1. Encodes the image to base64
 2. Sends the image directly to Gemini with a prompt
 3. Returns the generated caption
